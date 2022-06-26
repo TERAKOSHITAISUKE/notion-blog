@@ -6,8 +6,8 @@ const Footer = () => (
   <footer className={styles.footer}>
     <div>
       <span>Powered by </span>
-      <ExtLink href="https://github.com/otoyo/easy-notion-blog">
-        easy-notion-blog
+      <ExtLink href="https://github.com/TERAKOSHITAISUKE/notion-blog">
+        Tera
       </ExtLink>
     </div>
   </footer>

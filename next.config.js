@@ -8,7 +8,7 @@ const {
 const warnOrError =
   process.env.NODE_ENV !== 'production' || process.env.GITHUB_ACTIONS
     ? console.warn
-    : msg => {
+    : (msg) => {
         throw new Error(msg)
       }
 
@@ -33,6 +33,9 @@ if (!DATABASE_ID) {
 module.exports = {
   images: {
     domains: ['s3.us-west-2.amazonaws.com', 'images.unsplash.com'],
+  },
+  async rewrites() {
+    return [{ source: '/feed', destination: '/api/feed' }]
   },
 
   outputFileTracing: false,
